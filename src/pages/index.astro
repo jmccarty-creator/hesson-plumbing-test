@@ -300,11 +300,12 @@ import Layout from '../layouts/Layout.astro';
   <script>
     (function () {
       const photo = document.querySelector('.page-hero__photo') as HTMLElement | null;
-      if (!photo) return;
 
       function onScroll() {
         const scrollY = window.scrollY;
-        photo!.style.backgroundPositionY = `calc(50% + ${scrollY * 0.35}px)`;
+        if (photo) {
+          photo.style.backgroundPositionY = `calc(50% + ${scrollY * 0.35}px)`;
+        }
       }
 
       window.addEventListener('scroll', onScroll, { passive: true });
@@ -1009,6 +1010,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 768px) {
+    .testimonial { padding: 48px 0; }
     .testimonial__cards { grid-template-columns: 1fr; }
     .testimonial__tagline { white-space: normal; }
   }
@@ -1111,11 +1113,19 @@ import Layout from '../layouts/Layout.astro';
     .page-hero__card-small { font-size: 9px; }
 
     /* Other sections */
-    .services__grid { grid-template-columns: 1fr; }
-    .about__grid { grid-template-columns: 1fr; gap: 48px; }
-    .about__img-wrap { display: none; }
-    .cta-banner__inner { flex-direction: column; }
-    .cta-banner__actions { width: 100%; }
+    .services { padding: 48px 0; }
+    .services__header { margin-bottom: 32px; }
+    .services__grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .services__footer { display: flex; justify-content: center; }
+    .about { padding: 24px 0; }
+    .about__grid { grid-template-columns: 1fr; gap: 24px; }
+    .about__img-wrap { display: block; }
+    .about__img-placeholder { height: 300px; }
+    .about__photo { object-position: center 15%; }
+    .about__img-accent { display: none; }
+    .cta-banner__inner { flex-direction: column; align-items: center; text-align: center; }
+    .cta-banner__text { text-align: center; }
+    .cta-banner__actions { width: 100%; justify-content: center; }
     .cta-banner__btn { flex: 1; justify-content: center; }
     .stats-bar__inner { flex-wrap: wrap; gap: 24px; justify-content: center; }
     .stats-bar__divider { display: none; }
