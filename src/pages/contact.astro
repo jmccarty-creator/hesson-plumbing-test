@@ -1,0 +1,455 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact | Hesson Plumbing & Drains" description="Contact Hesson Plumbing & Drains in Central Ohio. Call (740) 304-4195 or request service online. Available 24/7 for emergencies.">
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero__glow"></div>
+    <div class="container page-hero__inner">
+      <p class="eyebrow">Get In Touch</p>
+      <h1>Let's Get<br /><span>It Fixed.</span></h1>
+      <p class="page-hero__sub">Call us directly for the fastest response — or fill out the form below and we'll get back to you quickly.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <section class="contact">
+    <div class="container contact__grid">
+
+      <!-- FORM -->
+      <div class="contact__form-wrap reveal-left">
+        <p class="form__label">Request Service</p>
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form__field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(740) 000-0000" required />
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" />
+          </div>
+          <div class="form__field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service...</option>
+              <option value="drain-cleaning">Drain Cleaning</option>
+              <option value="water-heater">Water Heater</option>
+              <option value="faucet">Faucet Repair / Replacement</option>
+              <option value="water-lines">Water Lines</option>
+              <option value="sewer">Sewer Services</option>
+              <option value="garbage-disposal">Garbage Disposal</option>
+              <option value="toilet-sink">Toilet / Sink / Fixtures</option>
+              <option value="sump-pump">Sump Pump</option>
+              <option value="gas-lines">Gas Lines</option>
+              <option value="emergency">Emergency Service</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="message">Describe the Issue</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's going on — the more detail the better..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary form__submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Request
+          </button>
+          <p class="form__note">For emergencies, call us directly at <a href="tel:7403044195">(740) 304-4195</a> — available 24/7.</p>
+          <div class="form__success" id="formSuccess">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <p>Message sent! We'll be in touch shortly.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact__info reveal-right">
+
+        <div class="info-card info-card--primary">
+          <p class="info-card__label">Emergency Line</p>
+          <a href="tel:7403044195" class="info-card__phone">(740) 304-4195</a>
+          <div class="info-card__status">
+            <div class="info-card__dot"></div>
+            <span>Available 24/7</span>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <p class="info-block__label">Email</p>
+          <a href="mailto:david@hessonplumbing.com" class="info-block__value">david@hessonplumbing.com</a>
+        </div>
+
+        <div class="info-block">
+          <p class="info-block__label">Office Address</p>
+          <p class="info-block__value">4299 Professional Pkwy<br />Groveport, OH 43125</p>
+        </div>
+
+        <div class="info-block">
+          <p class="info-block__label">Service Areas</p>
+          <div class="service-areas">
+            <span>Groveport</span>
+            <span>Pickerington</span>
+            <span>Columbus</span>
+            <span>Reynoldsburg</span>
+            <span>Canal Winchester</span>
+            <span>Pataskala</span>
+            <span>Gahanna</span>
+            <span>Central Ohio</span>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <p class="info-block__label">Financing</p>
+          <p class="info-block__value">Flexible financing options available. Ask us when you call.</p>
+        </div>
+
+        <div class="info-trust">
+          <div class="trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; Insured
+          </div>
+          <div class="trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            20+ Years Experience
+          </div>
+          <div class="trust-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Upfront Pricing
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const success = document.getElementById('formSuccess')!;
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      form.reset();
+      btn.style.display = 'none';
+      success.classList.add('visible');
+    }, 1000);
+  });
+</script>
+
+<style>
+  .page-hero {
+    background: var(--black);
+    padding: 160px 0 100px;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-hero__glow {
+    position: absolute; top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(15,54,125,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-hero__inner {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(72px, 11vw, 150px);
+    color: var(--white);
+  }
+
+  .page-hero h1 span { color: var(--blue-light); }
+
+  .page-hero__sub {
+    font-size: 17px; color: var(--grey);
+    max-width: 500px; line-height: 1.75;
+  }
+
+  /* CONTACT SECTION */
+  .contact {
+    background: var(--black);
+    padding: 88px 0 100px;
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 72px;
+    align-items: start;
+  }
+
+  /* FORM */
+  .form__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--blue-light);
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form__field label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--grey);
+  }
+
+  .form__field input,
+  .form__field select,
+  .form__field textarea {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 14px 16px;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form__field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+
+  .form__field select option {
+    background: var(--surface);
+    color: var(--white);
+  }
+
+  .form__field input::placeholder,
+  .form__field textarea::placeholder {
+    color: var(--grey-dim);
+  }
+
+  .form__field input:focus,
+  .form__field select:focus,
+  .form__field textarea:focus {
+    outline: none;
+    border-color: var(--blue-light);
+  }
+
+  .form__field textarea { resize: vertical; min-height: 120px; }
+
+  .form__submit {
+    font-size: 15px;
+    padding: 16px 36px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .form__note {
+    font-size: 13px;
+    color: var(--grey-dim);
+  }
+
+  .form__note a {
+    color: var(--blue-light);
+    transition: color 0.2s;
+  }
+
+  .form__note a:hover { color: var(--white); }
+
+  .form__success {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    background: rgba(34,197,94,0.1);
+    border: 1px solid rgba(34,197,94,0.3);
+    border-radius: 2px;
+    padding: 16px 20px;
+    color: #22c55e;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .form__success.visible { display: flex; }
+
+  /* CONTACT INFO */
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .info-card--primary {
+    background: var(--blue-dark);
+    border: 1px solid var(--border-blue);
+    border-radius: 2px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info-card__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--blue-light);
+  }
+
+  .info-card__phone {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--white);
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .info-card__phone:hover { color: var(--blue-light); }
+
+  .info-card__status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #22c55e;
+  }
+
+  .info-card__dot {
+    width: 7px; height: 7px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(34,197,94,0.25);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 2px rgba(34,197,94,0.25); }
+    50% { box-shadow: 0 0 0 5px rgba(34,197,94,0.08); }
+  }
+
+  .info-block {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info-block__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--blue-light);
+  }
+
+  .info-block__value {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.65;
+    transition: color 0.2s;
+  }
+
+  a.info-block__value:hover { color: var(--white); }
+
+  .service-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .service-areas span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--grey);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  .info-trust {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 4px;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--grey);
+  }
+
+  .trust-badge svg { color: var(--blue-light); flex-shrink: 0; }
+
+  @media (max-width: 900px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .form__row { grid-template-columns: 1fr; }
+    .form__submit { width: 100%; justify-content: center; }
+  }
+</style>

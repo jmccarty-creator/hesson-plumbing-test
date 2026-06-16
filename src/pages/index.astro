@@ -1,0 +1,1148 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__noise"></div>
+    <div class="hero__glow"></div>
+
+    <div class="container hero__inner">
+
+      <!-- BIG TYPE -->
+      <div class="hero__headline">
+        <h1>Ohio's<br /><span class="hero__outlined">Plumber</span></h1>
+        <p class="hero__sub">Trusted for 25+ years across Central Ohio. Available 24/7 for emergencies, repairs, drain cleaning, and more.</p>
+      </div>
+
+      <!-- CTA ROW -->
+      <div class="hero__cta-row">
+        <a href="tel:7403044195" class="btn-primary hero__btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 17z"/></svg>
+          Call Now
+        </a>
+        <a href="/contact" class="btn-ghost">Request Service</a>
+        <div class="hero__trust">
+          <span>✓ Licensed &amp; Insured</span>
+          <span>✓ Financing Available</span>
+          <span>✓ Central Ohio</span>
+        </div>
+      </div>
+
+      <!-- CARDS ROW -->
+      <div class="hero__cards">
+        <div class="hero__card hero__card--years">
+          <span class="hero__card-num" data-target="25" data-suffix="+">0+</span>
+          <span class="hero__card-label">Years Experience</span>
+        </div>
+
+        <div class="hero__card hero__card--emergency">
+          <div class="hero__card-dot"></div>
+          <div>
+            <p class="hero__card-title">Emergency Line</p>
+            <a href="tel:7403044195" class="hero__card-phone">(740) 304-4195</a>
+          </div>
+        </div>
+
+        <div class="hero__card hero__card--available">
+          <span class="hero__card-big">24/7</span>
+          <span class="hero__card-small">Available Now</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       STATS BAR
+  ══════════════════════════════════ -->
+  <section class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stats-bar__item reveal">
+        <span class="stats-bar__num" data-target="25" data-suffix="+">0+</span>
+        <span class="stats-bar__label">Years in Business</span>
+      </div>
+      <div class="stats-bar__divider"></div>
+      <div class="stats-bar__item reveal delay-1">
+        <span class="stats-bar__num">24/7</span>
+        <span class="stats-bar__label">Emergency Service</span>
+      </div>
+      <div class="stats-bar__divider"></div>
+      <div class="stats-bar__item reveal delay-2">
+        <span class="stats-bar__num" data-target="100" data-suffix="%">0%</span>
+        <span class="stats-bar__label">Satisfaction Focused</span>
+      </div>
+      <div class="stats-bar__divider"></div>
+      <div class="stats-bar__item reveal delay-3">
+        <span class="stats-bar__num">Ohio</span>
+        <span class="stats-bar__label">Licensed &amp; Insured</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       ABOUT
+  ══════════════════════════════════ -->
+  <section class="about">
+    <div class="container about__grid">
+
+      <div class="about__left reveal-left">
+        <div class="about__img-wrap">
+          <div class="about__img-placeholder">
+            <img src="/about.png" alt="Hesson Plumbing & Drains" class="about__photo" />
+          </div>
+          <div class="about__img-accent"></div>
+        </div>
+      </div>
+
+      <div class="about__right">
+        <p class="eyebrow reveal">About Us</p>
+        <h2 class="reveal delay-1">Locally Owned.<br /><span>Family Operated.</span></h2>
+        <p class="about__body reveal delay-2">
+          At Hesson Plumbing &amp; Drains, we're a locally owned and family-operated company with over 25 years of experience delivering dependable plumbing solutions. We take pride in providing honest, high-quality service, whether it's routine maintenance, drain cleaning, or more complex repairs and installations.
+        </p>
+        <p class="about__body reveal delay-3">
+          Our team understands how important a properly functioning plumbing system is to your home or business, which is why we respond promptly, work efficiently, and stand behind every job we complete. Built on a foundation of trust, reliability, and strong community values, we're committed to doing the job right the first time and treating every customer like family.
+        </p>
+
+        <div class="about__actions reveal delay-4">
+          <a href="/contact" class="btn-primary">Request Service</a>
+          <a href="tel:7403044195" class="about__phone">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 17z"/></svg>
+            (740) 304-4195
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SERVICES
+  ══════════════════════════════════ -->
+  <section class="services">
+    <div class="services__video-wrap">
+      <video class="services__video" autoplay muted loop playsinline>
+        <source src="/services-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="services__video-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="services__header reveal">
+        <p class="eyebrow">What We Do</p>
+        <h2>Full-Service Plumbing<br /><span>&amp; Drain Solutions</span></h2>
+      </div>
+
+      <div class="services__grid">
+        <a href="/services" class="svc reveal delay-1">
+          <div class="svc__num">01</div>
+          <h3>Drain Services</h3>
+          <p>Fast clearing of clogs and slow drains. Same-day service available across Central Ohio.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <a href="/services" class="svc reveal delay-2">
+          <div class="svc__num">02</div>
+          <h3>Faucet Services</h3>
+          <p>Indoor &amp; outdoor repair, upgrades, and new installations done right.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <a href="/services" class="svc reveal delay-3">
+          <div class="svc__num">03</div>
+          <h3>Water Heater Services</h3>
+          <p>Repair and replacement for any make and model. Hot water restored fast.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <a href="/services" class="svc reveal delay-1">
+          <div class="svc__num">04</div>
+          <h3>Water Lines</h3>
+          <p>New installations and repairs for clean, reliable water delivery.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <a href="/services" class="svc reveal delay-2">
+          <div class="svc__num">05</div>
+          <h3>Sewer Services</h3>
+          <p>Sewer line cleaning, repair, and camera inspection by licensed professionals.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <a href="/services" class="svc reveal delay-3">
+          <div class="svc__num">06</div>
+          <h3>Garbage Disposal Services</h3>
+          <p>Installation, repair, and replacement of garbage disposals done quickly and correctly.</p>
+          <div class="svc__arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="services__footer reveal">
+        <a href="/services" class="btn-ghost">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TAGLINE BANNER
+  ══════════════════════════════════ -->
+  <section class="tagline-banner">
+    <div class="tagline-banner__track">
+      <div class="tagline-banner__inner" aria-hidden="true">
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+        <span>Stop Stressin' &amp; <em>Call Hesson!</em></span>
+        <span class="tagline-banner__dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TESTIMONIAL
+  ══════════════════════════════════ -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="testimonial__header reveal">
+        <p class="eyebrow">Reviews</p>
+        <h2 class="testimonial__heading">What Our Customers<br /><span>Are Saying</span></h2>
+      </div>
+
+      <div class="testimonial__cards">
+        <a href="https://www.google.com/search?q=hesson+plumbing#lrd=0x88389b12c5cf667d:0xcd87c4b9a7a7ad52,3" target="_blank" class="testimonial__card reveal delay-1">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"He did such a great job I am having him out to do another job for us in the upcoming weeks. Courteous service, thorough inspection, and very reasonable pricing."</blockquote>
+          <p class="testimonial__name">Justin Richards</p>
+        </a>
+
+        <a href="https://www.google.com/search?q=hesson+plumbing#lrd=0x88389b12c5cf667d:0xcd87c4b9a7a7ad52,3" target="_blank" class="testimonial__card reveal delay-2">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"Dave made replacing my broken garbage disposal easy. Arrived on time, fast work, was courteous and very professional. Fairly priced too. Thank you for your excellent service!"</blockquote>
+          <p class="testimonial__name">Trish</p>
+        </a>
+
+        <a href="https://www.google.com/search?q=hesson+plumbing#lrd=0x88389b12c5cf667d:0xcd87c4b9a7a7ad52,3" target="_blank" class="testimonial__card reveal delay-3">
+          <div class="testimonial__stars">★★★★★</div>
+          <blockquote>"Had a pipe burst behind drywall on first floor. Dave was able to determine the location of the leak with minimal impact to drywall. We appreciated their timely communication and that they were able to come out the same day."</blockquote>
+          <p class="testimonial__name">Stacy S.</p>
+        </a>
+      </div>
+
+      <div class="testimonial__footer reveal">
+        <a href="https://www.google.com/search?q=hesson+plumbing#lrd=0x88389b12c5cf667d:0xcd87c4b9a7a7ad52,3" target="_blank" class="btn-primary">
+          Leave Us a Google Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="cta-banner__photo"></div>
+    <div class="cta-banner__bg"></div>
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text reveal-left">
+        <p class="eyebrow">Ready to Get Started?</p>
+        <h2>Plumbing Problem?<br /><span>We're On It.</span></h2>
+        <p>Available 24/7 for emergencies across Central Ohio.<br />No runaround. Just results.</p>
+      </div>
+      <div class="cta-banner__actions reveal-right">
+        <a href="tel:7403044195" class="btn-primary cta-banner__btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.93-.93a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 17z"/></svg>
+          Call (740) 304-4195
+        </a>
+        <a href="/contact" class="btn-ghost">Request Service</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* ══ HERO ══ */
+  .hero {
+    position: relative;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  /* Parallax background photo */
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/hero-bg.jpg');
+    background-size: auto 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.28;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero__noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .hero__glow {
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(15,54,125,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero__inner {
+    position: relative; z-index: 1;
+    padding: 80px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  /* big type */
+  .hero__headline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: clamp(120px, 18vw, 240px);
+    line-height: 0.88;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.8);
+  }
+
+  .hero__outlined {
+    color: transparent;
+    -webkit-text-stroke: 5px var(--blue-light);
+    display: block;
+    text-shadow: none;
+  }
+
+  .hero__sub {
+    font-size: 17px;
+    color: var(--grey);
+    max-width: 600px;
+    line-height: 1.75;
+    opacity: 0;
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  }
+
+  @keyframes heroLine {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero__logo-wrap {
+    padding: 16px 0;
+    opacity: 0;
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  }
+
+  .hero__logo {
+    height: clamp(100px, 14vw, 180px);
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* cards row */
+  .hero__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    flex-wrap: wrap;
+    width: 100%;
+    opacity: 0;
+    animation: heroLine 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+  }
+
+  .hero__card {
+    background: rgba(10,30,80,0.45);
+    border: 1px solid var(--border-blue);
+    backdrop-filter: blur(12px);
+    border-radius: 4px;
+    padding: 28px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .hero__card:hover {
+    background: rgba(15,54,125,0.7);
+    border-color: var(--blue-light);
+  }
+
+  .hero__card--years {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .hero__card-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    color: var(--blue-light);
+    line-height: 1;
+  }
+
+  .hero__card-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.2;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .hero__card-dot {
+    width: 8px; height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+    animation: pulse 2s infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.25); }
+    50% { box-shadow: 0 0 0 7px rgba(34,197,94,0.08); }
+  }
+
+  .hero__card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .hero__card-phone {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  .hero__card-phone:hover { color: var(--blue-light); }
+
+  .hero__card--available {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .hero__card-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--blue-light);
+    line-height: 1;
+  }
+
+  .hero__card-small {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* CTA row */
+  .hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    opacity: 0;
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+  }
+
+  .hero__btn { font-size: 14px; padding: 14px 28px; }
+
+  .hero__trust {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero__trust span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--white);
+  }
+
+  .hero__trust span::first-letter {
+    color: var(--blue-light);
+  }
+
+  /* scroll indicator */
+  .hero__scroll {
+    position: absolute;
+    bottom: 32px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: heroLine 0.8s ease 1.2s forwards;
+  }
+
+  .hero__scroll span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--grey-dim);
+  }
+
+  .hero__scroll-line {
+    width: 1px; height: 48px;
+    background: linear-gradient(to bottom, var(--grey-dim), transparent);
+    animation: scrollLine 1.5s ease-in-out infinite;
+  }
+
+  @keyframes scrollLine {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ══ STATS BAR ══ */
+  .stats-bar {
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 36px 0;
+  }
+
+  .stats-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .stats-bar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .stats-bar__num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: var(--blue-dark);
+    line-height: 1;
+    transition: color 0.2s;
+  }
+
+  .stats-bar__item:hover .stats-bar__num {
+    color: var(--blue-light);
+  }
+
+  .stats-bar__label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6b7280;
+  }
+
+  .stats-bar__divider {
+    width: 2px;
+    height: 48px;
+    background: var(--blue-light);
+    flex-shrink: 0;
+    margin: 0 16px;
+  }
+
+  /* ══ SERVICES ══ */
+  .services {
+    background: var(--black);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services__video-wrap {
+    position: absolute;
+    inset: -30%;
+    z-index: 0;
+  }
+
+  .services__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .services__video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.82);
+  }
+
+  .services .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .services__header {
+    margin-bottom: 56px;
+  }
+
+  .services__header h2 {
+    font-size: clamp(40px, 5vw, 72px);
+    margin-top: 12px;
+    color: var(--white);
+  }
+
+  .services__header h2 span { color: var(--blue-light); }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .svc {
+    background: var(--black);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .svc::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--blue-light);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .svc:hover { background: var(--surface); }
+  .svc:hover::before { transform: scaleX(1); }
+
+  .svc__num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 14px;
+    color: var(--white);
+    letter-spacing: 2px;
+    transition: color 0.2s;
+  }
+
+  .svc h3 {
+    font-size: 22px;
+    color: var(--blue-light);
+    transition: color 0.2s;
+  }
+
+  .svc:hover h3 { color: var(--white); }
+
+  .svc p {
+    font-size: 14px;
+    color: var(--grey);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .svc__arrow {
+    color: var(--white);
+    transition: color 0.2s, transform 0.2s;
+    width: fit-content;
+  }
+
+  .svc:hover .svc__arrow {
+    color: var(--blue-light);
+    transform: translateX(4px);
+  }
+
+  .svc:hover .svc__num { color: var(--blue-light); }
+
+  .svc--featured {
+    background: var(--blue-dark);
+  }
+
+  .svc--featured::before { background: var(--blue-light); }
+  .svc--featured:hover { background: rgba(15,54,125,0.85); }
+  .svc--featured h3 { color: var(--white); }
+  .svc--featured p { color: rgba(255,255,255,0.65); }
+  .svc--featured .svc__num { color: rgba(117,180,218,0.5); }
+  .svc--featured .svc__arrow { color: var(--blue-light); }
+
+  .svc__badge {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--blue-light);
+    letter-spacing: 2px;
+  }
+
+  .services__footer {
+    margin-top: 40px;
+  }
+
+  /* ══ ABOUT ══ */
+  .about {
+    background-color: var(--surface);
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+    padding: 100px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about__img-wrap {
+    position: relative;
+  }
+
+  .about__img-placeholder {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .about__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about__img-accent {
+    position: absolute;
+    bottom: -16px; right: -16px;
+    width: 120px; height: 120px;
+    background: var(--blue-dark);
+    border: 1px solid var(--border-blue);
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .about__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about__right h2 {
+    font-size: clamp(36px, 4vw, 60px);
+    color: var(--white);
+  }
+
+  .about__right h2 span { color: var(--blue-light); }
+
+  .about__body {
+    font-size: 16px;
+    color: var(--grey);
+    line-height: 1.8;
+  }
+
+  .about__stats {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .about__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .about__stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--blue-light);
+    line-height: 1;
+  }
+
+  .about__stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--grey-dim);
+  }
+
+  .about__stat-bar {
+    width: 1px; height: 40px;
+    background: var(--border);
+    flex-shrink: 0;
+  }
+
+  .about__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .about__phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--white);
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  .about__phone:hover { color: var(--blue-light); }
+
+  /* ══ TAGLINE BANNER ══ */
+  .tagline-banner {
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 20px 0;
+    overflow: hidden;
+  }
+
+  .tagline-banner__track {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .tagline-banner__inner {
+    display: inline-flex;
+    gap: 48px;
+    align-items: center;
+    animation: marquee 20s linear infinite;
+  }
+
+  .tagline-banner__inner span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--black);
+    letter-spacing: 2px;
+    flex-shrink: 0;
+  }
+
+  .tagline-banner__inner em {
+    font-style: normal;
+    color: var(--blue-light);
+  }
+
+  .tagline-banner__dot {
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ══ TESTIMONIAL ══ */
+  .testimonial {
+    position: relative;
+    background-color: #1e1e1e;
+    background-image:
+      radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.85) 100%),
+      repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.018) 0px,
+        rgba(255,255,255,0.018) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(255,255,255,0.018) 0px,
+        rgba(255,255,255,0.018) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+    padding: 100px 0;
+  }
+
+  .testimonial__header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .testimonial__heading {
+    font-size: clamp(40px, 5vw, 72px);
+    color: var(--white);
+    margin-top: 12px;
+  }
+
+  .testimonial__heading span { color: var(--blue-light); }
+
+  .testimonial__tagline {
+    font-size: clamp(32px, 4.5vw, 68px);
+    color: var(--white);
+    margin: 12px 0 0;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .testimonial__outline {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(117,180,218,0.6);
+  }
+
+  .testimonial__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  .testimonial__card {
+    background: var(--surface);
+    border: 1px solid var(--blue-light);
+    border-radius: 4px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 1px 6px rgba(0,0,0,0.4);
+  }
+
+  .testimonial__card:hover {
+    border-color: var(--blue-light);
+    box-shadow: 0 8px 36px rgba(0,0,0,0.65), 0 2px 10px rgba(117,180,218,0.15);
+  }
+
+  .testimonial__stars {
+    color: var(--blue-light);
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .testimonial__card blockquote {
+    font-size: 15px;
+    color: var(--grey);
+    line-height: 1.7;
+    font-style: normal;
+    flex: 1;
+  }
+
+  .testimonial__name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--blue-light);
+  }
+
+  .testimonial__footer {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial__cards { grid-template-columns: 1fr; }
+    .testimonial__tagline { white-space: normal; }
+  }
+
+  /* ══ CTA BANNER ══ */
+  .cta-banner {
+    background: var(--black);
+    border-top: 1px solid var(--border);
+    padding: 88px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner__photo {
+    position: absolute;
+    inset: -20%;
+    background-image: url('/cta-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .cta-banner__bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,54,125,0.5) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .cta-banner__inner {
+    position: relative; z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .cta-banner__text { flex: 1; min-width: 280px; }
+
+  .cta-banner__text h2 {
+    font-size: clamp(36px, 5vw, 64px);
+    color: var(--white);
+    margin: 12px 0 16px;
+  }
+
+  .cta-banner__text h2 span { color: var(--blue-light); }
+
+  .cta-banner__text p {
+    font-size: 16px;
+    color: var(--grey);
+    max-width: 440px;
+  }
+
+  .cta-banner__actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .cta-banner__btn { font-size: 15px; padding: 15px 36px; }
+
+  /* ══ RESPONSIVE ══ */
+  @media (max-width: 1024px) {
+    .hero__card { min-width: 140px; }
+  }
+
+  @media (max-width: 768px) {
+    .services__grid { grid-template-columns: 1fr; }
+    .about__grid { grid-template-columns: 1fr; gap: 48px; }
+    .about__img-wrap { display: none; }
+    .cta-banner__inner { flex-direction: column; }
+    .cta-banner__actions { width: 100%; }
+    .cta-banner__btn { flex: 1; justify-content: center; }
+    .stats-bar__inner { flex-wrap: wrap; gap: 24px; justify-content: center; }
+    .stats-bar__divider { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .hero__cards { flex-direction: column; }
+    .hero__cta-row { flex-direction: column; align-items: flex-start; }
+    .hero__trust { flex-direction: column; gap: 8px; }
+    .services__grid { grid-template-columns: 1fr; }
+  }
+</style>
