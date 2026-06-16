@@ -44,10 +44,8 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="page-hero__card page-hero__card--emergency">
           <div class="page-hero__card-dot"></div>
-          <div>
-            <p class="page-hero__card-title">Emergency Line</p>
-            <a href="tel:7403044195" class="page-hero__card-phone">(740) 304-4195</a>
-          </div>
+          <p class="page-hero__card-title">Emergency Line</p>
+          <a href="tel:7403044195" class="page-hero__card-phone">(740) 304-4195</a>
         </div>
 
         <div class="page-hero__card page-hero__card--available">
@@ -462,6 +460,13 @@ import Layout from '../layouts/Layout.astro';
   .page-hero__card--years {
     flex-direction: column;
     gap: 4px;
+  }
+
+  .page-hero__card--emergency {
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    text-align: center;
   }
 
   .page-hero__card-num {
