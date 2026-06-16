@@ -6,11 +6,15 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="page-hero">
+    <div class="page-hero__photo"></div>
+    <div class="page-hero__noise"></div>
     <div class="page-hero__glow"></div>
+    <div class="page-hero__glow page-hero__glow--left"></div>
     <div class="container page-hero__inner">
-      <p class="eyebrow">Get In Touch</p>
-      <h1>Let's Get<br /><span>It Fixed.</span></h1>
-      <p class="page-hero__sub">Call us directly for the fastest response — or fill out the form below and we'll get back to you quickly.</p>
+      <div class="page-hero__headline">
+        <h1>Let's Get<br /><span>It Fixed.</span></h1>
+        <p class="page-hero__sub">Call us directly for the fastest response — or fill out the form below and we'll get back to you quickly.</p>
+      </div>
     </div>
   </section>
 
@@ -18,8 +22,23 @@ import Layout from '../layouts/Layout.astro';
   <section class="contact">
     <div class="container contact__grid">
 
-      <!-- FORM -->
+      <!-- MAP + FORM -->
       <div class="contact__form-wrap reveal-left">
+
+        <!-- MAP -->
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=4299+Professional+Pkwy,+Groveport,+OH+43125&output=embed&z=15"
+            width="100%"
+            height="320"
+            style="border:0; display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Hesson Plumbing & Drains Location">
+          </iframe>
+        </div>
+
         <p class="form__label">Request Service</p>
         <form class="form" id="contactForm" novalidate>
           <div class="form__row">
@@ -108,6 +127,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="info-block">
           <p class="info-block__label">Financing</p>
           <p class="info-block__value">Flexible financing options available. Ask us when you call.</p>
+          <a href="/services#financing" class="btn-primary info-block__btn">Learn About Financing</a>
         </div>
 
         <div class="info-trust">
@@ -153,33 +173,95 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .page-hero {
     background: var(--black);
-    padding: 160px 0 100px;
-    position: relative; overflow: hidden;
+    min-height: 62vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
     border-bottom: 1px solid var(--border);
   }
 
-  .page-hero__glow {
-    position: absolute; top: -100px; right: -100px;
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(15,54,125,0.3) 0%, transparent 70%);
+  .page-hero__photo {
+    position: absolute;
+    inset: -20%;
+    background-image: url('/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.18;
     pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-hero__noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .page-hero__glow {
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(15,54,125,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .page-hero__glow--left {
+    top: auto; right: auto;
+    bottom: -150px; left: -100px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(15,54,125,0.2) 0%, transparent 70%);
   }
 
   .page-hero__inner {
     position: relative; z-index: 1;
-    display: flex; flex-direction: column; gap: 20px;
+    padding: 80px 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
   }
+
+  .page-hero__headline { display: flex; flex-direction: column; gap: 12px; }
 
   .page-hero h1 {
-    font-size: clamp(72px, 11vw, 150px);
+    font-size: clamp(120px, 18vw, 240px);
+    line-height: 0.88;
     color: var(--white);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
   }
 
-  .page-hero h1 span { color: var(--blue-light); }
+  .page-hero h1 span {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--blue-light);
+    display: block;
+    text-shadow: none;
+  }
+
+  @keyframes heroLine {
+    to { opacity: 1; transform: translateY(0); }
+  }
 
   .page-hero__sub {
-    font-size: 17px; color: var(--grey);
-    max-width: 500px; line-height: 1.75;
+    font-size: 17px;
+    color: var(--grey);
+    max-width: 500px;
+    line-height: 1.75;
+    opacity: 0;
+    animation: heroLine 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
+  }
+
+  /* MAP */
+  .contact-map {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 32px;
   }
 
   /* CONTACT SECTION */
@@ -402,6 +484,13 @@ import Layout from '../layouts/Layout.astro';
   }
 
   a.info-block__value:hover { color: var(--white); }
+
+  .info-block__btn {
+    margin-top: 12px;
+    font-size: 13px;
+    padding: 11px 24px;
+    align-self: flex-start;
+  }
 
   .service-areas {
     display: flex;
