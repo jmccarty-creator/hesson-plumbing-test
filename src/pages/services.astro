@@ -354,6 +354,16 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <script>
+    (function () {
+      const photo = document.querySelector('.page-hero__photo') as HTMLElement | null;
+      function onScroll() {
+        if (photo) photo.style.backgroundPositionY = `calc(100% + ${window.scrollY * 0.35}px)`;
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
+
 </Layout>
 
 <style>
@@ -382,6 +392,7 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0.18;
     pointer-events: none;
     z-index: 0;
+    will-change: background-position;
   }
 
   .page-hero__noise {

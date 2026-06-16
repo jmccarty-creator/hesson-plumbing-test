@@ -35,14 +35,12 @@ import '../styles/drain-cleaning.css';
       <div class="dc-hero__cards">
         <div class="dc-hero__card dc-hero__card--years">
           <span class="dc-hero__card-num">25+</span>
-          <span class="dc-hero__card-label">Years Experience</span>
+          <span class="dc-hero__card-label">Years<br />Experience</span>
         </div>
         <div class="dc-hero__card dc-hero__card--emergency">
           <div class="dc-hero__card-dot"></div>
-          <div>
-            <p class="dc-hero__card-title">Emergency Line</p>
-            <a href="tel:7403044195" class="dc-hero__card-phone">(740) 304-4195</a>
-          </div>
+          <p class="dc-hero__card-title">Emergency Line</p>
+          <a href="tel:7403044195" class="dc-hero__card-phone">(740) 304-4195</a>
         </div>
         <div class="dc-hero__card dc-hero__card--available">
           <span class="dc-hero__card-big">24/7</span>
@@ -407,6 +405,25 @@ import '../styles/drain-cleaning.css';
       </div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      const heroBg = document.querySelector('.dc-hero__photo') as HTMLElement | null;
+      const hydroBg = document.querySelector('.dc-hydro__bg') as HTMLElement | null;
+
+      function onScroll() {
+        const scrollY = window.scrollY;
+        if (heroBg) heroBg.style.backgroundPositionY = `calc(50% + ${scrollY * 0.35}px)`;
+        if (hydroBg) {
+          const rect = (hydroBg.parentElement as HTMLElement).getBoundingClientRect();
+          const offset = (window.innerHeight / 2 - rect.top - rect.height / 2) * 0.3;
+          hydroBg.style.backgroundPositionY = `calc(50% + ${offset}px)`;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+    })();
+  </script>
 
 </Layout>
 
