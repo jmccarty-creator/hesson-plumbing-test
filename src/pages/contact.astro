@@ -262,12 +262,37 @@ import Layout from '../layouts/Layout.astro';
     overflow: hidden;
     border: 1px solid var(--border);
     margin-bottom: 32px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.7), 0 2px 12px rgba(0,0,0,0.5);
   }
 
   /* CONTACT SECTION */
   .contact {
+    position: relative;
     background: var(--black);
     padding: 88px 0 100px;
+    overflow: hidden;
+  }
+
+  /* hatch noise texture */
+  .contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.045'/%3E%3C/svg%3E");
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* dark gray center with black vignette */
+  .contact::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at center, #1e1e1e 0%, #111111 45%, #0a0a0a 100%);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .contact__grid {
@@ -275,6 +300,8 @@ import Layout from '../layouts/Layout.astro';
     grid-template-columns: 1fr 420px;
     gap: 72px;
     align-items: start;
+    position: relative;
+    z-index: 1;
   }
 
   /* FORM */
@@ -407,16 +434,18 @@ import Layout from '../layouts/Layout.astro';
     background: var(--blue-dark);
     border: 1px solid var(--border-blue);
     border-radius: 2px;
-    padding: 28px;
+    padding: 36px 28px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 
   .info-card__label {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--blue-light);
@@ -424,7 +453,7 @@ import Layout from '../layouts/Layout.astro';
 
   .info-card__phone {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
+    font-size: 56px;
     color: var(--white);
     letter-spacing: 1px;
     transition: color 0.2s;
@@ -437,10 +466,11 @@ import Layout from '../layouts/Layout.astro';
   .info-card__status {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #22c55e;
