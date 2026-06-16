@@ -377,11 +377,10 @@ import Layout from '../layouts/Layout.astro';
 
   .page-hero__photo {
     position: absolute;
-    inset: -20%;
+    inset: 0;
     background-image: url('/hero-2.jpg');
     background-size: cover;
     background-position: center 100%;
-    background-attachment: fixed;
     opacity: 0.18;
     pointer-events: none;
     z-index: 0;
@@ -1138,6 +1137,16 @@ import Layout from '../layouts/Layout.astro';
   .cta-banner__btn { font-size: 15px; padding: 15px 36px; }
 
   @media (max-width: 768px) {
+    /* Hero */
+    .page-hero h1 { font-size: clamp(64px, 16vw, 120px); }
+    .page-hero h1 span { -webkit-text-stroke: 2px var(--blue-light); }
+    .page-hero__inner { padding: 60px 0 80px; gap: 28px; }
+    .page-hero__cta-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .page-hero__trust { flex-direction: column; gap: 8px; }
+    .page-hero__cards { flex-direction: column; }
+    .page-hero__card { width: 100%; flex: none; padding: 20px 24px; }
+
+    /* Content */
     .svc-intro__inner { grid-template-columns: 1fr; gap: 40px; }
     .svc-intro__stats { gap: 24px; flex-wrap: wrap; }
     .sewer-grid { grid-template-columns: 1fr; }
@@ -1151,5 +1160,9 @@ import Layout from '../layouts/Layout.astro';
     .cta-banner__inner { flex-direction: column; }
     .cta-banner__actions { width: 100%; }
     .cta-banner__btn { flex: 1; justify-content: center; }
+  }
+
+  @media (max-width: 480px) {
+    .page-hero h1 { font-size: clamp(52px, 14vw, 80px); }
   }
 </style>

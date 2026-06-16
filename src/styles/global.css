@@ -59,6 +59,10 @@ img { max-width: 100%; display: block; }
   padding: 0 32px;
 }
 
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+}
+
 .eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 600;
