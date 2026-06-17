@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container page-hero__inner">
       <div class="page-hero__headline">
         <h1>Let's Get<br /><span>It Fixed.</span></h1>
-        <p class="page-hero__sub">Call us directly for the fastest response — or fill out the form below and we'll get back to you quickly.</p>
+        <p class="page-hero__sub">Call for immediate service or fill out the form<br class="mobile-break" /> and we'll reach out the same day.</p>
       </div>
     </div>
   </section>
@@ -139,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="trust-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            20+ Years Experience
+            25+ Years Experience
           </div>
           <div class="trust-badge">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
@@ -555,7 +555,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--grey);
+    color: var(--white);
     background: var(--surface);
     border: 1px solid var(--border);
     padding: 4px 10px;
@@ -593,7 +593,10 @@ import Layout from '../layouts/Layout.astro';
     .form__submit { width: 100%; justify-content: center; }
   }
 
+  .mobile-break { display: none; }
+
   @media (max-width: 768px) {
+    .mobile-break { display: inline; }
     .page-hero { min-height: 0; }
     .page-hero h1 { font-size: clamp(52px, 14vw, 90px); text-align: center; }
     .page-hero h1 span { -webkit-text-stroke: 2px var(--blue-light); }
