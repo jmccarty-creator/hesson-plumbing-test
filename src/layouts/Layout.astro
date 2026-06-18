@@ -4,12 +4,19 @@ import '../styles/global.css';
 export interface Props {
   title?: string;
   description?: string;
+  canonicalPath?: string;
+  ogImage?: string;
 }
 
 const {
-  title = 'Hesson Plumbing & Drains | Central Ohio',
-  description = "Hesson Plumbing & Drains — Central Ohio's trusted plumber for 25+ years. Available 24/7. Call (740) 304-4195.",
+  title = 'Hesson Plumbing & Drains | Plumber in Groveport, OH',
+  description = "Locally owned plumber serving Groveport, Pickerington & Central Ohio for 25+ years. Available 24/7 for emergencies, drain cleaning, water heaters & more. Call (740) 304-4195.",
+  canonicalPath = '',
+  ogImage = '/og-image.jpg',
 } = Astro.props;
+
+const siteUrl = 'https://hessonplumbing.com';
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
 ---
 
 <!doctype html>
@@ -18,8 +25,84 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:site_name" content="Hesson Plumbing &amp; Drains" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "Hesson Plumbing & Drains",
+        "url": "https://hessonplumbing.com",
+        "telephone": "+17403044195",
+        "email": "david@hessonplumbing.com",
+        "description": "Locally owned plumber serving Central Ohio for 25+ years. Available 24/7 for emergencies, drain cleaning, water heaters, sewer services, and more.",
+        "foundingDate": "2000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4299 Professional Pkwy",
+          "addressLocality": "Groveport",
+          "addressRegion": "OH",
+          "postalCode": "43125",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.8620,
+          "longitude": -82.8838
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Groveport"},
+          {"@type": "City", "name": "Pickerington"},
+          {"@type": "City", "name": "Columbus"},
+          {"@type": "City", "name": "Reynoldsburg"},
+          {"@type": "City", "name": "Canal Winchester"},
+          {"@type": "City", "name": "Pataskala"},
+          {"@type": "City", "name": "Gahanna"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Plumbing Services",
+          "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Drain Cleaning"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hydro Jetting"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sewer Services"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Water Heater Repair & Replacement"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Faucet Repair & Replacement"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Plumbing"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Camera Inspections"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Sump Pump Installation"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pipe Leak Repair"}}
+          ]
+        },
+        "knowsAbout": ["Drain Cleaning", "Hydro Jetting", "Sewer Repair", "Water Heater Repair", "Emergency Plumbing", "Central Ohio Plumbing"]
+      })}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -64,7 +147,7 @@ const {
           <div class="footer__brand">
             <img src="/logo1.png" alt="Hesson Plumbing & Drains" class="footer__logo" />
             <p>Your neighborhood plumber, done right.</p>
-            <p class="footer__license">Licensed &amp; Insured · Central Ohio</p>
+            <p class="footer__license">Family Owned &amp; Operated · Central Ohio</p>
           </div>
           <div class="footer__col">
             <p class="footer__heading">Navigation</p>
